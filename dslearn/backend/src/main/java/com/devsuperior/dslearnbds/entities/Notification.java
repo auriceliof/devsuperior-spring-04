@@ -37,13 +37,14 @@ public class Notification implements Serializable{
 	public Notification() {
 	}
 
-	public Notification(Long id, String text, Instant moment, Boolean read, String route) {
+	public Notification(Long id, String text, Instant moment, Boolean read, String route, User user) {
 		super();
 		this.id = id;
 		this.text = text;
 		this.moment = moment;
 		this.read = read;
 		this.route = route;
+		this.user = user;
 	}
 
 	public Long getId() {
@@ -84,6 +85,14 @@ public class Notification implements Serializable{
 
 	public void setRoute(String route) {
 		this.route = route;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	@Override

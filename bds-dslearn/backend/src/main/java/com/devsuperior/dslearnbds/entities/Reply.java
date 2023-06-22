@@ -42,8 +42,8 @@ public class Reply implements Serializable {
 	@ManyToMany
 	@JoinTable(name = "tb_reply_likes",
 		joinColumns = @JoinColumn(name = "reply_id"),
-		inverseJoinColumns = @JoinColumn(name = "user_id")
-	)
+		inverseJoinColumns = @JoinColumn(name = "user_id"))
+	
 	private Set<User> likes = new HashSet<>();
 	
 	public Reply() {
@@ -118,3 +118,5 @@ public class Reply implements Serializable {
 		return true;
 	}
 }
+
+

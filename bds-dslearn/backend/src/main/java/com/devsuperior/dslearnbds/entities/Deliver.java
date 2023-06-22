@@ -46,8 +46,8 @@ public class Deliver implements Serializable {
 	public Deliver() {
 	}
 
-	public Deliver(Long id, String uri, Instant moment, DeliverStatus status, String feedback, Integer correctCount,
-			Enrollment enrollment, Lesson lesson) {
+	public Deliver(Long id, String uri, Instant moment, DeliverStatus status, 
+		String feedback, Integer correctCount, Enrollment enrollment, Lesson lesson) {
 		super();
 		this.id = id;
 		this.uri = uri;
@@ -148,3 +148,9 @@ public class Deliver implements Serializable {
 		return true;
 	}
 }
+
+
+
+
+
+

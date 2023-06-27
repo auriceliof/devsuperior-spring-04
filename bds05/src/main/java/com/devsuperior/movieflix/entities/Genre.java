@@ -22,7 +22,7 @@ public class Genre implements Serializable{
 	private Long id;
 	private String name;
 	
-	@OneToMany(mappedBy = "Genre")
+	@OneToMany(mappedBy = "genre")
 	private List<Movie> movies = new ArrayList<>();
 	
 	public Genre() {

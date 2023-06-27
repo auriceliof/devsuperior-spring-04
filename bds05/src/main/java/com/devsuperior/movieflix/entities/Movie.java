@@ -25,28 +25,29 @@ public class Movie implements Serializable{
 	private String title;
 	private String subTitle;
 	private Integer year;
-	private String imgUri;
-	private String Sinopsis;
+	private String imgUrl;
+	private String Synopsis;
 	
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
 	
-	@OneToMany(mappedBy = "Movie")
+	@OneToMany(mappedBy = "movie")
 	private List<Review> reviews = new ArrayList<>();
 	
 	public Movie() {
 		
 	}
-
-	public Movie(Long id, String title, String subTitle, Integer year, String imgUri, String sinopsis, Genre genre) {
+	
+	public Movie(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis, Genre genre) {
+		super();
 		this.id = id;
 		this.title = title;
 		this.subTitle = subTitle;
 		this.year = year;
-		this.imgUri = imgUri;
-		Sinopsis = sinopsis;
-		this.genre = genre;
+		this.imgUrl = imgUrl;
+		Synopsis = synopsis;
+
 	}
 
 	public Long getId() {
@@ -81,20 +82,20 @@ public class Movie implements Serializable{
 		this.year = year;
 	}
 
-	public String getImgUri() {
-		return imgUri;
+	public String getImgUrl() {
+		return imgUrl;
 	}
 
-	public void setImgUri(String imgUri) {
-		this.imgUri = imgUri;
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 
-	public String getSinopsis() {
-		return Sinopsis;
+	public String getSynopsis() {
+		return Synopsis;
 	}
 
-	public void setSinopsis(String sinopsis) {
-		Sinopsis = sinopsis;
+	public void setSynopsis(String synopsis) {
+		Synopsis = synopsis;
 	}
 
 	public List<Review> getReviews() {
